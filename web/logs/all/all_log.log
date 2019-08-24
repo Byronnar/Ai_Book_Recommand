@@ -1,0 +1,36 @@
+2019-07-20 02:38:50,065 - INFO - app:is_valid - lineno:180 - username:200018,password:leuven, vlaams-brabant, belgium: has login success
+2019-07-20 05:10:35,623 - INFO - app:is_valid - lineno:182 - username:167166,password: weyhe bei bremen, bremen, germany: has login filed
+2019-07-20 05:10:48,298 - INFO - app:is_valid - lineno:182 - username:167166,password:: has login filed
+2019-07-20 05:10:57,028 - INFO - app:is_valid - lineno:179 - username:167166,password:weyhe bei bremen, bremen, germany: has login success
+2019-07-20 06:20:39,754 - INFO - web:update_recommend_book - lineno:239 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('167166','3442429439','0') 
+2019-07-20 06:20:41,941 - INFO - web:rating - lineno:358 - update book rating success,sql:UPDATE Bookrating SET Rating='10' WHERE UserID="167166" and BookID="3442429439"  
+2019-07-20 06:20:45,342 - INFO - web:update_recommend_book - lineno:239 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('167166','0971880107','0') 
+2019-07-20 06:20:47,047 - INFO - web:rating - lineno:358 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('167166','0971880107','10') 
+2019-07-20 06:21:22,321 - INFO - web:update_recommend_book - lineno:233 - update_recommend_book, sql:UPDATE Booktuijian SET score='0' WHERE UserID="167166" and BookID="0971880107" 
+2019-07-20 06:21:24,030 - INFO - web:add - lineno:447 - update Cart  success,sql:INSERT INTO Cart (UserID,BookID ) values ('167166','0971880107') 
+2019-07-20 06:26:04,211 - INFO - web:is_valid - lineno:179 - username:167166,password:weyhe bei bremen, bremen, germany: has login success
+2019-07-20 06:27:01,073 - INFO - web:update_recommend_book - lineno:233 - update_recommend_book, sql:UPDATE Booktuijian SET score='0' WHERE UserID="167166" and BookID="0971880107" 
+2019-07-20 07:00:42,316 - INFO - web:register - lineno:156 - username:test,password:123456,age:18 register success
+2019-07-20 07:00:51,834 - INFO - web:is_valid - lineno:179 - username:test,password:123456: has login success
+2019-07-20 07:01:16,507 - INFO - web:is_valid - lineno:179 - username:167166,password:weyhe bei bremen, bremen, germany: has login success
+2019-07-20 07:01:48,407 - INFO - web:update_recommend_book - lineno:233 - update_recommend_book, sql:UPDATE Booktuijian SET score='0' WHERE UserID="167166" and BookID="0971880107" 
+2019-07-20 07:01:51,377 - INFO - web:rating - lineno:358 - update book rating success,sql:UPDATE Bookrating SET Rating='8' WHERE UserID="167166" and BookID="0971880107"  
+2019-07-20 07:01:52,282 - INFO - web:rating - lineno:358 - update book rating success,sql:UPDATE Bookrating SET Rating='6' WHERE UserID="167166" and BookID="0971880107"  
+2019-07-20 07:01:53,512 - INFO - web:rating - lineno:358 - update book rating success,sql:UPDATE Bookrating SET Rating='4' WHERE UserID="167166" and BookID="0971880107"  
+2019-07-20 07:01:57,939 - INFO - web:delete - lineno:463 - delete Cart  success,sql:DELETE  FROM Cart WHERE UserID="167166" and BookID="0971880107" 
+2019-07-20 07:02:35,472 - INFO - web:delete_user - lineno:571 - delete User  success,sql:DELETE  FROM User WHERE UserID="2" 
+2019-07-20 07:02:51,484 - INFO - web:delete_user - lineno:571 - delete User  success,sql:DELETE  FROM User WHERE UserID="232404" 
+2019-07-20 07:02:57,884 - INFO - web:delete_book - lineno:622 - delete Books  success,sql:DELETE  FROM Books WHERE BookID="074322678X" 
+2019-07-20 07:03:11,321 - INFO - web:is_valid - lineno:179 - username:test,password:123456: has login success
+2019-07-20 07:03:17,683 - INFO - web:update_recommend_book - lineno:239 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('test','0971880107','0') 
+2019-07-20 07:03:20,353 - INFO - web:rating - lineno:358 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('test','0971880107','10') 
+2019-07-20 07:03:20,694 - INFO - web:add - lineno:447 - update Cart  success,sql:INSERT INTO Cart (UserID,BookID ) values ('test','0971880107') 
+2019-07-20 07:18:11,344 - INFO - web:register - lineno:156 - username:test-fun,password:123456,age:18 register success
+2019-07-20 07:18:22,531 - INFO - web:is_valid - lineno:179 - username:test-fun,password:123456: has login success
+2019-07-20 07:18:36,486 - INFO - web:update_recommend_book - lineno:239 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('test-fun','0316666343','0') 
+2019-07-20 07:18:40,649 - INFO - web:rating - lineno:358 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('test-fun','0316666343','10') 
+2019-07-20 07:18:41,817 - INFO - web:add - lineno:447 - update Cart  success,sql:INSERT INTO Cart (UserID,BookID ) values ('test-fun','0316666343') 
+2019-07-20 07:19:15,388 - INFO - web:delete - lineno:463 - delete Cart  success,sql:DELETE  FROM Cart WHERE UserID="test-fun" and BookID="0316666343" 
+2019-07-20 07:19:27,490 - INFO - web:is_valid - lineno:179 - username:167166,password:weyhe bei bremen, bremen, germany: has login success
+2019-07-20 07:20:22,989 - INFO - web:delete_user - lineno:571 - delete User  success,sql:DELETE  FROM User WHERE UserID="4" 
+2019-07-20 07:20:39,007 - INFO - web:delete_book - lineno:622 - delete Books  success,sql:DELETE  FROM Books WHERE BookID="0195153448" 

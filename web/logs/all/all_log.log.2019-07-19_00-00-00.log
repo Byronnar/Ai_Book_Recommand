@@ -1,0 +1,303 @@
+2019-07-19 10:44:35,372 - INFO - app:is_valid - lineno:180 - username:byronnar,password:fjf526520: has login success
+2019-07-19 11:13:08,547 - INFO - app:update_recommend_book - lineno:234 - update_recommend_book, sql:UPDATE Booktuijian SET score='0' WHERE UserID="byronnar" and BookID="0142001740" 
+2019-07-19 11:13:17,440 - INFO - app:update_recommend_book - lineno:234 - update_recommend_book, sql:UPDATE Booktuijian SET score='0' WHERE UserID="byronnar" and BookID="0195153448" 
+2019-07-19 11:15:06,303 - INFO - app:update_recommend_book - lineno:240 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('byronnar','0316666343','0') 
+2019-07-19 11:15:08,309 - INFO - app:rating - lineno:359 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('byronnar','0316666343','10') 
+2019-07-19 11:15:10,091 - INFO - app:add - lineno:448 - update Cart  success,sql:INSERT INTO Cart (UserID,BookID ) values ('byronnar','0316666343') 
+2019-07-19 11:15:56,602 - INFO - app:update_recommend_book - lineno:234 - update_recommend_book, sql:UPDATE Booktuijian SET score='0' WHERE UserID="byronnar" and BookID="0195153448" 
+2019-07-19 11:16:01,017 - ERROR - app:rating - lineno:361 - rating books error: 'NoneType' object has no attribute 'settimeout'
+Traceback (most recent call last):
+  File "app.py", line 358, in rating
+    mysql.exe(sql)
+  File "/home/byronnar/Compeition/BookRecommend/web/utils.py", line 55, in exe
+    self.connection.commit()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 420, in commit
+    self._read_ok_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 394, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 657, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 688, in _read_bytes
+    self._sock.settimeout(self._read_timeout)
+AttributeError: 'NoneType' object has no attribute 'settimeout'
+2019-07-19 11:16:01,771 - ERROR - app:rating - lineno:361 - rating books error: Packet sequence number wrong - got 101 expected 12
+Traceback (most recent call last):
+  File "app.py", line 358, in rating
+    mysql.exe(sql)
+  File "/home/byronnar/Compeition/BookRecommend/web/utils.py", line 55, in exe
+    self.connection.commit()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 420, in commit
+    self._read_ok_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 394, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 671, in _read_packet
+    % (packet_number, self._next_seq_id))
+pymysql.err.InternalError: Packet sequence number wrong - got 101 expected 12
+2019-07-19 11:16:01,772 - ERROR - app:root - lineno:34 - select hot books error: 'NoneType' object has no attribute 'read'
+Traceback (most recent call last):
+  File "app.py", line 30, in root
+    hot_books = mysql.fetchall_db(sql)
+  File "/home/byronnar/Compeition/BookRecommend/web/utils.py", line 44, in fetchall_db
+    c.execute(sql)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1082, in read
+    self._read_result_packet(first_packet)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1152, in _read_result_packet
+    self._read_rowdata_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1186, in _read_rowdata_packet
+    packet = self.connection._read_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 674, in _read_packet
+    recv_data = self._read_bytes(bytes_to_read)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 691, in _read_bytes
+    data = self._rfile.read(num_bytes)
+AttributeError: 'NoneType' object has no attribute 'read'
+2019-07-19 11:16:02,042 - ERROR - app:rating - lineno:361 - rating books error: Result length not requested length:
+Expected=10.  Actual=4.  Position: 1.  Data Length: 5
+Traceback (most recent call last):
+  File "app.py", line 351, in rating
+    count = mysql.fetchone_db(sql)
+  File "/home/byronnar/Compeition/BookRecommend/web/utils.py", line 33, in fetchone_db
+    c.execute(sql)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1082, in read
+    self._read_result_packet(first_packet)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1152, in _read_result_packet
+    self._read_rowdata_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1190, in _read_rowdata_packet
+    rows.append(self._read_row_from_packet(packet))
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1199, in _read_row_from_packet
+    data = packet.read_length_coded_string()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/protocol.py", line 178, in read_length_coded_string
+    return self.read(length)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/protocol.py", line 73, in read
+    raise AssertionError(error)
+AssertionError: Result length not requested length:
+Expected=10.  Actual=4.  Position: 1.  Data Length: 5
+2019-07-19 11:16:02,043 - ERROR - app:rating - lineno:361 - rating books error: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 547, in ping
+    self._read_ok_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 394, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 668, in _read_packet
+    "Lost connection to MySQL server during query")
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 351, in rating
+    count = mysql.fetchone_db(sql)
+  File "/home/byronnar/Compeition/BookRecommend/web/utils.py", line 32, in fetchone_db
+    self.connection.ping(reconnect=True)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 550, in ping
+    self.connect()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._get_server_information()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 975, in _get_server_information
+    packet = self._read_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 668, in _read_packet
+    "Lost connection to MySQL server during query")
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2019-07-19 11:16:02,043 - ERROR - app:root - lineno:34 - select hot books error: 'NoneType' object has no attribute 'settimeout'
+Traceback (most recent call last):
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 547, in ping
+    self._read_ok_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 394, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 671, in _read_packet
+    % (packet_number, self._next_seq_id))
+pymysql.err.InternalError: Packet sequence number wrong - got 33 expected 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 30, in root
+    hot_books = mysql.fetchall_db(sql)
+  File "/home/byronnar/Compeition/BookRecommend/web/utils.py", line 43, in fetchall_db
+    self.connection.ping(reconnect=True)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 550, in ping
+    self.connect()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 599, in connect
+    self._request_authentication()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 860, in _request_authentication
+    self.write_packet(data)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 645, in write_packet
+    self._write_bytes(data)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 711, in _write_bytes
+    self._sock.settimeout(self._write_timeout)
+AttributeError: 'NoneType' object has no attribute 'settimeout'
+2019-07-19 11:16:02,301 - ERROR - app:root - lineno:34 - select hot books error: 'NoneType' object has no attribute 'read'
+Traceback (most recent call last):
+  File "app.py", line 30, in root
+    hot_books = mysql.fetchall_db(sql)
+  File "/home/byronnar/Compeition/BookRecommend/web/utils.py", line 44, in fetchall_db
+    c.execute(sql)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1082, in read
+    self._read_result_packet(first_packet)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1152, in _read_result_packet
+    self._read_rowdata_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1186, in _read_rowdata_packet
+    packet = self.connection._read_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 674, in _read_packet
+    recv_data = self._read_bytes(bytes_to_read)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 691, in _read_bytes
+    data = self._rfile.read(num_bytes)
+AttributeError: 'NoneType' object has no attribute 'read'
+2019-07-19 11:16:02,571 - ERROR - app:rating - lineno:361 - rating books error: 'NoneType' object has no attribute 'read'
+Traceback (most recent call last):
+  File "app.py", line 351, in rating
+    count = mysql.fetchone_db(sql)
+  File "/home/byronnar/Compeition/BookRecommend/web/utils.py", line 33, in fetchone_db
+    c.execute(sql)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1082, in read
+    self._read_result_packet(first_packet)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1152, in _read_result_packet
+    self._read_rowdata_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1186, in _read_rowdata_packet
+    packet = self.connection._read_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 674, in _read_packet
+    recv_data = self._read_bytes(bytes_to_read)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 691, in _read_bytes
+    data = self._rfile.read(num_bytes)
+AttributeError: 'NoneType' object has no attribute 'read'
+2019-07-19 11:16:03,343 - ERROR - app:rating - lineno:361 - rating books error: (2014, 'Command Out of Sync')
+Traceback (most recent call last):
+  File "app.py", line 358, in rating
+    mysql.exe(sql)
+  File "/home/byronnar/Compeition/BookRecommend/web/utils.py", line 55, in exe
+    self.connection.commit()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 420, in commit
+    self._read_ok_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 396, in _read_ok_packet
+    raise err.OperationalError(2014, "Command Out of Sync")
+pymysql.err.OperationalError: (2014, 'Command Out of Sync')
+2019-07-19 11:16:03,611 - ERROR - app:rating - lineno:361 - rating books error: 'NoneType' object has no attribute 'read'
+Traceback (most recent call last):
+  File "app.py", line 351, in rating
+    count = mysql.fetchone_db(sql)
+  File "/home/byronnar/Compeition/BookRecommend/web/utils.py", line 33, in fetchone_db
+    c.execute(sql)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1082, in read
+    self._read_result_packet(first_packet)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1152, in _read_result_packet
+    self._read_rowdata_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1186, in _read_rowdata_packet
+    packet = self.connection._read_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 674, in _read_packet
+    recv_data = self._read_bytes(bytes_to_read)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 691, in _read_bytes
+    data = self._rfile.read(num_bytes)
+AttributeError: 'NoneType' object has no attribute 'read'
+2019-07-19 11:16:12,697 - INFO - app:rating - lineno:359 - update book rating success,sql:UPDATE Bookrating SET Rating='10' WHERE UserID="byronnar" and BookID="0195153448"  
+2019-07-19 11:23:58,579 - ERROR - app:recommend - lineno:114 - select recommend books error: Result length not requested length:
+Expected=7.  Actual=4.  Position: 1.  Data Length: 5
+Traceback (most recent call last):
+  File "app.py", line 110, in recommend
+    recommend_books = mysql.fetchall_db(sql)
+  File "/home/byronnar/Compeition/BookRecommend/web/utils.py", line 44, in fetchall_db
+    c.execute(sql)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1082, in read
+    self._read_result_packet(first_packet)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1152, in _read_result_packet
+    self._read_rowdata_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1190, in _read_rowdata_packet
+    rows.append(self._read_row_from_packet(packet))
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1199, in _read_row_from_packet
+    data = packet.read_length_coded_string()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/protocol.py", line 178, in read_length_coded_string
+    return self.read(length)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/protocol.py", line 73, in read
+    raise AssertionError(error)
+AssertionError: Result length not requested length:
+Expected=7.  Actual=4.  Position: 1.  Data Length: 5
+2019-07-19 11:23:58,580 - ERROR - app:recommend - lineno:114 - select recommend books error: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 547, in ping
+    self._read_ok_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 394, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 671, in _read_packet
+    % (packet_number, self._next_seq_id))
+pymysql.err.InternalError: Packet sequence number wrong - got 33 expected 13
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 110, in recommend
+    recommend_books = mysql.fetchall_db(sql)
+  File "/home/byronnar/Compeition/BookRecommend/web/utils.py", line 43, in fetchall_db
+    self.connection.ping(reconnect=True)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 550, in ping
+    self.connect()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 599, in connect
+    self._request_authentication()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 861, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 668, in _read_packet
+    "Lost connection to MySQL server during query")
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2019-07-19 11:26:21,970 - INFO - app:is_valid - lineno:180 - username:278858,password:dublin, n/a, ireland: has login success
+2019-07-19 11:33:36,982 - INFO - app:is_valid - lineno:180 - username:276954,password:freiburg, baden-wuerttemberg, germany: has login success
+2019-07-19 11:37:45,818 - INFO - app:update_recommend_book - lineno:240 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('276954','0971880107','0') 
+2019-07-19 11:37:48,340 - INFO - app:rating - lineno:359 - update book rating success,sql:UPDATE Bookrating SET Rating='10' WHERE UserID="276954" and BookID="0971880107"  
+2019-07-19 11:37:49,233 - INFO - app:add - lineno:448 - update Cart  success,sql:INSERT INTO Cart (UserID,BookID ) values ('276954','0971880107') 
+2019-07-19 11:44:40,920 - INFO - app:is_valid - lineno:180 - username:6102,password:jamaica, , usa: has login success
+2019-07-19 12:10:39,774 - INFO - app:update_recommend_book - lineno:240 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('6102','0446672211','0') 
+2019-07-19 12:10:41,709 - INFO - app:rating - lineno:359 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('6102','0446672211','10') 
+2019-07-19 12:10:43,128 - INFO - app:add - lineno:448 - update Cart  success,sql:INSERT INTO Cart (UserID,BookID ) values ('6102','0446672211') 
+2019-07-19 12:10:46,832 - INFO - app:update_recommend_book - lineno:240 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('6102','0060928336','0') 
+2019-07-19 12:10:49,555 - INFO - app:rating - lineno:359 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('6102','0060928336','2') 
+2019-07-19 12:10:50,381 - INFO - app:add - lineno:448 - update Cart  success,sql:INSERT INTO Cart (UserID,BookID ) values ('6102','0060928336') 
+2019-07-19 12:16:01,749 - INFO - app:update_recommend_book - lineno:234 - update_recommend_book, sql:UPDATE Booktuijian SET score='0' WHERE UserID="6102" and BookID="0804103003" 
+2019-07-19 21:36:32,296 - INFO - app:is_valid - lineno:180 - username:byronnar,password:fjf526520: has login success
+2019-07-19 22:18:07,946 - INFO - app:is_valid - lineno:180 - username:byronnar,password:fjf526520: has login success
+2019-07-19 23:57:24,822 - INFO - app:is_valid - lineno:180 - username:39027,password:tempe, arizona, usa: has login success
+2019-07-19 23:57:28,075 - INFO - app:update_recommend_book - lineno:240 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('39027','0142001740','0') 
+2019-07-19 23:57:30,104 - INFO - app:rating - lineno:359 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('39027','0142001740','10') 

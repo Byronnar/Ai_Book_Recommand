@@ -1,0 +1,77 @@
+2019-07-18 13:23:39,180 - INFO - app:register - lineno:157 - username:byronnar,password:fjf526520,age:18 register success
+2019-07-18 13:23:47,501 - INFO - app:is_valid - lineno:180 - username:byronnar,password:fjf526520: has login success
+2019-07-18 13:24:01,437 - INFO - app:update_recommend_book - lineno:240 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('byronnar','0971880107','0') 
+2019-07-18 13:24:04,200 - INFO - app:rating - lineno:359 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('byronnar','0971880107','10') 
+2019-07-18 13:24:05,755 - INFO - app:add - lineno:448 - update Cart  success,sql:INSERT INTO Cart (UserID,BookID ) values ('byronnar','0971880107') 
+2019-07-18 13:30:51,437 - INFO - app:update_recommend_book - lineno:240 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('byronnar','0743486226','0') 
+2019-07-18 13:30:53,882 - INFO - app:rating - lineno:359 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('byronnar','0743486226','10') 
+2019-07-18 13:31:29,729 - INFO - app:update_recommend_book - lineno:234 - update_recommend_book, sql:UPDATE Booktuijian SET score='0' WHERE UserID="byronnar" and BookID="0971880107" 
+2019-07-18 13:31:33,735 - INFO - app:rating - lineno:359 - update book rating success,sql:UPDATE Bookrating SET Rating='6' WHERE UserID="byronnar" and BookID="0971880107"  
+2019-07-18 13:31:33,965 - ERROR - app:root - lineno:34 - select hot books error: 'NoneType' object has no attribute 'read'
+Traceback (most recent call last):
+  File "app.py", line 30, in root
+    hot_books = mysql.fetchall_db(sql)
+  File "/home/byronnar/pyprojects/windows/competition/BookRecommend/web/utils.py", line 44, in fetchall_db
+    c.execute(sql)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1082, in read
+    self._read_result_packet(first_packet)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1152, in _read_result_packet
+    self._read_rowdata_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1186, in _read_rowdata_packet
+    packet = self.connection._read_packet()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 674, in _read_packet
+    recv_data = self._read_bytes(bytes_to_read)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 691, in _read_bytes
+    data = self._rfile.read(num_bytes)
+AttributeError: 'NoneType' object has no attribute 'read'
+2019-07-18 13:36:29,784 - INFO - app:update_recommend_book - lineno:240 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('byronnar','0142001740','0') 
+2019-07-18 13:36:34,920 - INFO - app:rating - lineno:359 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('byronnar','0142001740','8') 
+2019-07-18 13:36:36,014 - INFO - app:add - lineno:448 - update Cart  success,sql:INSERT INTO Cart (UserID,BookID ) values ('byronnar','0142001740') 
+2019-07-18 13:37:05,010 - INFO - app:delete - lineno:464 - delete Cart  success,sql:DELETE  FROM Cart WHERE UserID="byronnar" and BookID="0971880107" 
+2019-07-18 13:37:05,758 - INFO - app:delete - lineno:464 - delete Cart  success,sql:DELETE  FROM Cart WHERE UserID="byronnar" and BookID="0142001740" 
+2019-07-18 14:52:49,524 - INFO - app:is_valid - lineno:180 - username:byronnar,password:fjf526520: has login success
+2019-07-18 14:53:09,244 - ERROR - app:guess - lineno:79 - select guess books error: 'NoneType' object has no attribute 'read'
+Traceback (most recent call last):
+  File "app.py", line 75, in guess
+    guess_books = mysql.fetchall_db(sql)
+  File "/home/byronnar/pyprojects/windows/competition/BookRecommend/web/utils.py", line 44, in fetchall_db
+    c.execute(sql)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1082, in read
+    self._read_result_packet(first_packet)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1151, in _read_result_packet
+    self._get_descriptions()
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 1222, in _get_descriptions
+    field = self.connection._read_packet(FieldDescriptorPacket)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 674, in _read_packet
+    recv_data = self._read_bytes(bytes_to_read)
+  File "/home/byronnar/anaconda3/lib/python3.7/site-packages/pymysql/connections.py", line 691, in _read_bytes
+    data = self._rfile.read(num_bytes)
+AttributeError: 'NoneType' object has no attribute 'read'
+2019-07-18 10:23:22,172 - INFO - app:is_valid - lineno:183 - username:byronnar,password:fjf526520: has login filed
+2019-07-18 10:23:38,036 - INFO - app:register - lineno:157 - username:byronnar,password:fjf526520,age:18 register success
+2019-07-18 10:23:45,607 - INFO - app:is_valid - lineno:180 - username:byronnar,password:fjf526520: has login success
+2019-07-18 10:23:53,421 - INFO - app:update_recommend_book - lineno:240 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('byronnar','0971880107','0') 
+2019-07-18 10:23:55,777 - INFO - app:rating - lineno:359 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('byronnar','0971880107','10') 
+2019-07-18 10:23:56,533 - INFO - app:add - lineno:448 - update Cart  success,sql:INSERT INTO Cart (UserID,BookID ) values ('byronnar','0971880107') 
+2019-07-18 10:23:59,905 - INFO - app:update_recommend_book - lineno:240 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('byronnar','0142001740','0') 
+2019-07-18 10:24:01,358 - INFO - app:rating - lineno:359 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('byronnar','0142001740','10') 
+2019-07-18 10:32:09,554 - INFO - app:update_recommend_book - lineno:234 - update_recommend_book, sql:UPDATE Booktuijian SET score='0' WHERE UserID="byronnar" and BookID="0971880107" 
+2019-07-18 11:49:29,242 - INFO - app:update_recommend_book - lineno:240 - update_recommend_book, sql: insert into Booktuijian (UserID,BookID,score) values ('byronnar','0195153448','0') 
+2019-07-18 11:49:31,224 - INFO - app:rating - lineno:359 - update book rating success,sql:INSERT INTO Bookrating (UserID,BookID,Rating) values ('byronnar','0195153448','4') 
+2019-07-18 11:49:32,161 - INFO - app:add - lineno:448 - update Cart  success,sql:INSERT INTO Cart (UserID,BookID ) values ('byronnar','0195153448') 
