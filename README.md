@@ -3,5 +3,5 @@
 
 
 前端界面展示：
-![image](http://github.com/Byronnar/Ai_Book_Recommand/images/index.png)
+![image](http://github.com/Byronnar/Ai_Book_Recommand/raw/master/images/index.png)
 
