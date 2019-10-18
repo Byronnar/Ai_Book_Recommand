@@ -1,7 +1,9 @@
 # Ai_Book_Recommand
 这是一个完整的项目,包括算法端计算,后端数据库,前端界面展示,  使用的推荐算法：基于协同过滤算法（Collaborative Filtering）的AI图书推荐系统，随着用户的点击,数据不断积累,准确率也可以提高
 
+### 数据集下载地址
 
+链接:https://pan.baidu.com/s/1FSfApupRTud0f3kV-xbhDA&shfl=sharepset 提取码:n55o
 
 前端界面展示：
 
